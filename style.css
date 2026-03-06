@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -105,7 +107,6 @@ body {
 .logo-container img {
     max-width: 200px;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .login-form-container {
@@ -134,8 +135,8 @@ body {
 
 
 .logo-container {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: white;
     border-radius: 50%;
     display: flex;
