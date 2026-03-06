@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Escolar Isaias J. R.</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="main-container">
+        <div class="main-content">
+            <!-- Left Side - Branding -->
+            <section class="brand-section">
+                <header class="logo-container">
+                    <img src="logo-escola.png" alt="Logotipo da Escola VEMU">
+                </header>
+                <h1 class="institute-name">COLÉGIO ISAIAS JOSÉ RODRIGUES</h1>
+                <p class="institute-subtitle">Educação Básica e Ensino Médio</p>
+
+                <div class="project-title" role="doc-subtitle">
+                    Portal do Aluno e do Professor
+                </div>
+
+                <div class="role-info-cards">
+                    <article class="role-info-card student-info">
+                        <i class="ri-user-smile-line" aria-hidden="true"></i>
+                        <p><strong>Alunos e Pais:</strong> Confiram notas de provas, boletins e lições de casa.</p>
+                    </article>
+                    <article class="role-info-card faculty-info">
+                        <i class="ri-user-star-line" aria-hidden="true"></i>
+                        <p><strong>Professores:</strong> Lançamento de notas, faltas e ocorrências da turma.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Side - Login Forms -->
+            <section class="login-section">
+                <nav class="login-tabs" role="tablist">
+                    <button class="tab-btn student-tab active" onclick="switchTab('student')" role="tab"
+                        aria-selected="true">
+                        <i class="ri-parent-line"></i>
+                        <span>Área do Aluno</span>
+                    </button>
+                    <button class="tab-btn faculty-tab" onclick="switchTab('faculty')" role="tab" aria-selected="false">
+                        <i class="ri-presentation-line"></i>
+                        <span>Área do Professor</span>
+                    </button>
+                </nav>
+
+                <article class="login-form-container student-form active" id="studentForm">
+                    <header class="form-header student-header">
+                        <h2>Bem-vindo ao Portal</h2>
+                        <p>Acesse seu boletim escolar</p>
+                    </header>
+
+                    <form onsubmit="handleStudentLogin(event)">
+                        <div class="form-group">
+                            <label for="studentRA">RA (Registro do Aluno)</label>
+                            <div class="input-wrapper">
+                                <i class="ri-user-id-line"></i>
+                                <input type="text" id="studentRA" placeholder="Número do RA" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentYear">Ano / Série</label>
+                            <div class="input-wrapper">
+                                <i class="ri-community-line"></i>
+                                <select id="studentYear" required>
+                                    <option value="">Selecione o ano</option>
+                                    <optgroup label="Ensino Fundamental">
+                                        <option value="6">6º Ano</option>
+                                        <option value="7">7º Ano</option>
+                                        <option value="8">8º Ano</option>
+                                        <option value="9">9º Ano</option>
+                                    </optgroup>
+                                    <optgroup label="Ensino Médio">
+                                        <option value="M1">1º Ano Médio</option>
+                                        <option value="M2">2º Ano Médio</option>
+                                        <option value="M3">3º Ano Médio</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentBimester">Bimestre Atual</label>
+                            <div class="input-wrapper">
+                                <i class="ri-calendar-event-line"></i>
+                                <select id="studentBimester" required>
+                                    <option value="1">1º Bimestre</option>
+                                    <option value="2">2º Bimestre</option>
+                                    <option value="3">3º Bimestre</option>
+                                    <option value="4">4º Bimestre</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="studentPassword">Senha</label>
+                            <div class="input-wrapper">
+                                <i class="ri-lock-password-line"></i>
+                                <input type="password" id="studentPassword" placeholder="Sua senha" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="login-btn student-btn">
+                            Entrar no Portal
+                        </button>
+                    </form>
+                </article>
+
+                <article class="login-form-container faculty-form" id="facultyForm" hidden>
+                    <header class="form-header faculty-header">
+                        <h2>Portal do Professor</h2>
+                        <p>Gestão de turmas e notas</p>
+                    </header>
+
+                    <form onsubmit="handleFacultyLogin(event)">
+                        <div class="form-group">
+                            <label for="facultyUser">Usuário / E-mail</label>
+                            <div class="input-wrapper">
+                                <i class="ri-user-received-2-line"></i>
+                                <input type="text" id="facultyUser" placeholder="Seu usuário" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="facultyPassword">Senha</label>
+                            <div class="input-wrapper">
+                                <i class="ri-lock-line"></i>
+                                <input type="password" id="facultyPassword" placeholder="Sua senha" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="login-btn faculty-btn">
+                            Acessar Painel
+                        </button>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <address class="footer-info">
+            <p>Secretaria escolar: (11) 0000-0000 | <a
+                    href="mailto:contato@escolavemu.com.br">contato@escolavemu.com.br</a></p>
+            <p>© 2026 Colégio Isaias José Rodrigues - Excelência no Ensino.</p>
+        </address>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

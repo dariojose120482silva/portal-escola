@@ -1,0 +1,848 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --student-color: #27ae60;
+    --student-dark: #1e8449;
+    --faculty-color: #2980b9;
+    --faculty-dark: #1c5980;
+    --primary-bg: #1a3a5c;
+    --secondary-bg: #2c5f8d;
+    --text-dark: #333;
+    --text-light: #666;
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+}
+
+
+/* 1. O Body controla a pilha vertical (Main em cima, Footer embaixo) */
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Altura total da tela */
+    font-family: 'Bai Jamjuree', sans-serif;
+    overflow: hidden;
+}
+
+/* 2. O Main divide a tela em duas colunas */
+
+
+
+
+.access-side {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.main-container {
+
+    flex: 1;
+    /* Estica para ocupar o espaço acima do footer */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg);
+
+}
+
+/* Container principal que envolve as duas seções */
+.main-content {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+
+    /* Ocupa a altura total da tela */
+    width: 100%;
+    height: 50px;
+  
+    /* Garante que as duas colunas tenham a mesma altura */
+    min-height: 90vh;
+
+}
+
+/* Seção da Esquerda (Branding/Logo) */
+.brand-section {
+    flex: 1;
+    /* Ocupa 50% do espaço ou proporcionalmente ao conteúdo */
+
+    /* Cor de fundo suave para a marca */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Seção da Direita (Login/Cadastro) */
+.login-section {
+    flex: 1;
+    /* Ocupa os outros 50% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f2ebeb;
+}
+
+
+
+/* Ajuste das imagens e inputs para não quebrarem o layout */
+.logo-container img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 400px;
+    /* Limita a largura do formulário para não ficar esticado */
+}
+
+
+/* Left Side - Branding */
+.brand-section {
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex: 1;
+    min-height: 300px;
+    border-radius: 10px 0 0 10px;
+
+}
+
+
+
+.logo-container {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.logo-container img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.institute-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.institute-subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.project-title {
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.role-info-cards {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.role-info-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.role-info-card i {
+    margin-right: 8px;
+}
+
+.student-info {
+    border-left: 4px solid var(--student-color);
+}
+
+.faculty-info {
+    border-left: 4px solid var(--faculty-color);
+}
+
+/* Right Side - Login Forms */
+.login-section {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.7rem;
+    flex: 1;
+    background: #efe2e2;
+    border-radius: 0 10px 10px 0;
+
+}
+
+/* Tab Navigation */
+.login-tabs {
+    width: 55%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.tab-btn {
+    margin-top: 0.1rem;
+    height: 70px;
+    flex: 1;
+    padding: 1rem 1rem;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.0rem;
+    font-weight: 700;
+    color: var(--text-light);
+    border: 2px solid transparent;
+}
+
+
+
+.tab-btn i {
+    font-size: 24px;
+}
+
+.tab-btn.student-tab.active {
+    background: var(--student-color);
+    color: white;
+    border-color: var(--student-dark);
+}
+
+.tab-btn.faculty-tab.active {
+    background: var(--faculty-color);
+    color: white;
+    border-color: var(--faculty-dark);
+}
+
+.tab-btn:hover:not(.active) {
+    background: #e9ecef;
+}
+
+/* Login Forms */
+.login-form-container {
+    display: none;
+}
+
+.login-form-container.active {
+
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    color: var(--text-dark);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.form-header.student-header h2 {
+    color: var(--student-color);
+}
+
+.form-header.faculty-header h2 {
+    color: var(--faculty-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-bg);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.1);
+}
+
+.student-form .form-group input:focus,
+.student-form .form-group select:focus {
+    border-color: var(--student-color);
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.faculty-form .form-group input:focus,
+.faculty-form .form-group select:focus {
+    border-color: var(--faculty-color);
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 18px;
+}
+
+.password-toggle:hover {
+    color: var(--primary-bg);
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--primary-bg);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.student-btn {
+    background: linear-gradient(135deg, var(--student-color) 0%, var(--student-dark) 100%);
+    color: white;
+}
+
+.faculty-btn {
+    background: linear-gradient(135deg, var(--faculty-color) 0%, var(--faculty-dark) 100%);
+    color: white;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.login-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Messages */
+.error-message,
+.success-message,
+.warning-message {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.error-message {
+    background: #fee;
+    border: 1px solid #fcc;
+    color: #c00;
+}
+
+.success-message {
+    background: #efe;
+    border: 1px solid #cfc;
+    color: #060;
+}
+
+.warning-message {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+}
+
+.error-message.show,
+.success-message.show,
+.warning-message.show {
+    display: flex;
+}
+
+/* Security Badge */
+.security-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+    color: #888;
+    font-size: 12px;
+}
+
+.security-badge i {
+    color: var(--primary-bg);
+}
+
+
+
+/* Footer */
+
+
+.footer-info {
+    background-color: #504e4ef8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centraliza na vertical */
+    align-items: center;
+    /* Centraliza na horizontal */
+
+    width: 100%;
+    /* Use 100% para garantir o alinhamento central */
+   
+  
+    /* Centraliza o container na página */
+    margin: 0 auto;
+
+    padding: 1rem 0.5rem;
+   
+
+
+}
+
+.footer-info p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #e7eaaa;
+    line-height: 1.4;
+}
+
+
+.footer-info a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+/* Access Level Badge */
+.access-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.access-badge.student {
+    background: rgba(39, 174, 96, 0.1);
+    color: var(--student-color);
+    border: 1px solid var(--student-color);
+}
+
+.access-badge.faculty {
+    background: rgba(41, 128, 185, 0.1);
+    color: var(--faculty-color);
+    border: 1px solid var(--faculty-color);
+}
+
+/* Loading Spinner */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shake Animation */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Faculty Role Sub-Selection */
+.faculty-role-select {
+    display: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.faculty-role-select.show {
+    display: block;
+}
+
+.faculty-role-select label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.faculty-role-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.faculty-role-option {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+
+.faculty-role-option i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--faculty-color);
+}
+
+.faculty-role-option:hover {
+    border-color: var(--faculty-color);
+    background: rgba(41, 128, 185, 0.05);
+}
+
+.faculty-role-option.active {
+    border-color: var(--faculty-color);
+    background: var(--faculty-color);
+    color: white;
+}
+
+.faculty-role-option.active i {
+    color: white;
+}
+
+/* Help Text */
+.help-text {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.help-text i {
+    color: var(--warning-color);
+}
+
+/* ==========================================================
+   DA TELA GRANDE PARA A PEQUENA (BREAKPOINTS)
+   ========================================================== */
+
+/* 1. TABLETS E LAPTOPS PEQUENOS (Até 1024px) */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        width: 95%;
+        /* Dá um pouco de respiro nas bordas */
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .login-tabs {
+        width: 80%;
+        /* Aumenta as abas para facilitar o toque */
+    }
+}
+
+/* 2. TABLETS VERTICAIS (Até 768px) */
+/* Aqui o layout deixa de ser LADO A LADO e vira UM EM CIMA DO OUTRO */
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        /* Libera a rolagem pois o conteúdo ficará longo */
+    }
+
+    .main-content {
+        flex-direction: column;
+        /* Empilha: Marca em cima, Login embaixo */
+        border-radius: 15px;
+        /* Arredonda todos os cantos agora */
+        margin: 20px 0;
+    }
+
+    .brand-section,
+    .login-section {
+        max-width: 100%;
+        /* Ocupam a largura total */
+        border-radius: 0;
+        /* Reseta para não conflitar com o container pai */
+    }
+
+    /* Arredondamento apenas no topo da marca e base do login */
+    .brand-section {
+        border-radius: 15px 15px 0 0;
+        padding: 40px 20px;
+    }
+
+    .login-section {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .login-tabs {
+        width: 100%;
+        /* Abas ocupam a largura total do form */
+    }
+
+    .footer-info a {
+        color: var(--primary-bg);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .footer-info a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+/* 3. CELULARES MÉDIOS (Até 480px - Ex: Seu Samsung A10s) */
+@media screen and (max-width: 480px) {
+    .school-title {
+        font-size: 0.85rem;
+        /* Reduz o título abreviado I. J. R. */
+        max-width: 160px;
+    }
+
+    .institute-name {
+        font-size: 18px;
+        /* Diminui o nome da escola na marca */
+    }
+
+    .logo-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-container img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .login-btn {
+        padding: 12px;
+        /* Botão um pouco menor para telas pequenas */
+        font-size: 14px;
+    }
+
+    .footer-info a {
+        color: var(--primary-bg);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .footer-info a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* 4. CELULARES MUITO PEQUENOS (Até 320px) */
+@media screen and (max-width: 320px) {
+    .login-tabs {
+        gap: 5px;
+    }
+
+    .tab-btn {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .tab-btn i {
+        font-size: 18px;
+    }
+
+
+    .footer-info {
+        padding: 0.8rem;
+        text-align: center;
+        padding-top: 1.0rem;
+        border-top: 1px solid #e0e0e0;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+        color: #1a1616;
+        line-height: 0.4;
+        margin-bottom: 0.8rem;
+    }
+
+
+    .footer-info a {
+        color: var(--primary-bg);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .footer-info a:hover {
+        text-decoration: underline;
+    }
+}
