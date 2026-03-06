@@ -808,6 +808,13 @@ body {
         gap: 5px;
     }
 
+    .logo-container {
+        width: 80px;
+        height: 80px;
+    }
+
+   
+
     .tab-btn {
         padding: 10px 5px;
         font-size: 12px;
