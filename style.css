@@ -693,7 +693,7 @@ body {
    ========================================================== */
 
 /* 1. TABLETS E LAPTOPS PEQUENOS (Até 1024px) */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1040px) {
     .main-content {
         width: 95%;
         /* Dá um pouco de respiro nas bordas */
