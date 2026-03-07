@@ -701,6 +701,8 @@ body {
     .login-tabs {
         width: 80%;
     }
+
+  
 }
 
 /* 2. TABLETS E CELULARES GRANDES (Até 768px) */
@@ -747,6 +749,11 @@ body {
         /* Opcional: dá um respiro entre a logo e a borda branca */
         display: block;
     }
+
+   .area-do-professor, .area-do-aluno {
+    white-space: nowrap;
+    font-size: 0.9rem;
+   }
 }
 
 /* 3. CELULARES (Faixa de 393px até 480px) */
@@ -769,6 +776,9 @@ body {
         padding: 12px;
         font-size: 14px;
     }
+
+   
+   
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
@@ -782,6 +792,7 @@ body {
         font-size: 11px;
         /* Diminuído levemente */
     }
+
 
     .footer-info p {
         line-height: 1.2;
