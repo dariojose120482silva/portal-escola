@@ -736,7 +736,7 @@ body {
     }
 
     /* Definimos o logo uma única vez para mobile aqui */
-    .logo-container img {
+    .colegio img {
         width: 150px;
         /* Ocupa toda a largura do círculo */
         height: 150px;
