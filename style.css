@@ -735,9 +735,9 @@ body {
 
     /* Definimos o logo uma única vez para mobile aqui */
     .logo-container img {
-        width: 100%;
+        width: 150%;
         /* Ocupa toda a largura do círculo */
-        height: 100%;
+        height: 150%;
         /* Ocupa toda a altura do círculo */
         object-fit: contain;
         /* Ou 'cover' se quiser que a imagem sangre até a borda */
