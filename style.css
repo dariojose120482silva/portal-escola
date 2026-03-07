@@ -802,6 +802,13 @@ body {
     }
 }
 
+@media screen and (max-width: 393px) {
+      .logo-container {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 /* 4. CELULARES MUITO PEQUENOS (Até 320px) */
 @media screen and (max-width: 320px) {
     .login-tabs {
