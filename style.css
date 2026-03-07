@@ -697,6 +697,7 @@ body {
         height: auto;
         min-height: 80vh;
     }
+
     .login-tabs {
         width: 80%;
     }
@@ -712,11 +713,13 @@ body {
     .main-content {
         flex-direction: column;
         border-radius: 15px;
-        margin: 10px auto; /* Centraliza o container */
+        margin: 10px auto;
+        /* Centraliza o container */
         min-height: 100vh;
     }
 
-    .brand-section, .login-section {
+    .brand-section,
+    .login-section {
         max-width: 100%;
         border-radius: 0;
     }
@@ -731,16 +734,18 @@ body {
     }
 
     /* Definimos o logo uma única vez para mobile aqui */
-    .logo-container {
-        width: 100px;
-        height: 100px;
-        background: white;
+    .logo-container img {
+        width: 100%;
+        /* Ocupa toda a largura do círculo */
+        height: 100%;
+        /* Ocupa toda a altura do círculo */
+        object-fit: contain;
+        /* Ou 'cover' se quiser que a imagem sangre até a borda */
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto 20px auto; /* Centraliza horizontalmente */
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        /* Garante que a imagem também seja circular se necessário */
+        padding: 10px;
+        /* Opcional: dá um respiro entre a logo e a borda branca */
+        display: block;
     }
 }
 
@@ -774,11 +779,13 @@ body {
 
     .tab-btn {
         padding: 10px 5px;
-        font-size: 11px; /* Diminuído levemente */
+        font-size: 11px;
+        /* Diminuído levemente */
     }
 
     .footer-info p {
-        line-height: 1.2; /* Cuidado: 0.4 pode encavalar as letras */
+        line-height: 1.2;
+        /* Cuidado: 0.4 pode encavalar as letras */
         font-size: 0.75rem;
     }
 }
