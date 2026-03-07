@@ -737,15 +737,15 @@ body {
 
     /* Definimos o logo uma única vez para mobile aqui */
     .logo-container img {
-        width: 150%;
+        width: 150px;
         /* Ocupa toda a largura do círculo */
-        height: 150%;
+        height: 150px;
         /* Ocupa toda a altura do círculo */
         object-fit: contain;
         /* Ou 'cover' se quiser que a imagem sangre até a borda */
         border-radius: 50%;
         /* Garante que a imagem também seja circular se necessário */
-        padding: 10px;
+      
         /* Opcional: dá um respiro entre a logo e a borda branca */
         display: block;
     }
@@ -754,6 +754,13 @@ body {
     white-space: nowrap;
     font-size: 0.9rem;
    }
+
+   
+    .footer-info p {
+        line-height: 1.2;
+        /* Cuidado: 0.4 pode encavalar as letras */
+        font-size: 0.75rem;
+    }
 }
 
 /* 3. CELULARES (Faixa de 393px até 480px) */
