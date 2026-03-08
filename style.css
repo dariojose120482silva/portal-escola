@@ -102,10 +102,7 @@ body {
 
 
 /* Ajuste das imagens e inputs para não quebrarem o layout */
-.logo-container img {
-    max-width: 200px;
-    height: auto;
-}
+
 
 .login-form-container {
     width: 100%;
@@ -133,27 +130,33 @@ body {
 
 
 .logo-container {
-    width: 100px;
-    height: 100px;
-    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+
+   justify-content: center;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px 0 rgba(243, 5, 5, 0.3);
-    transition: all 0.3s ease;
+    margin-bottom: 50px;
+ 
 }
 
-.logo-container:hover {
-    transform: scale(1.1);
-}
 
 .logo-container img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
+    width: 150px;
+    /* Ocupa toda a largura do círculo */
+    height: 150px;
+
 }
+
+
+
+
+
 
 .institute-name {
     font-size: 20px;
@@ -696,18 +699,24 @@ body {
    DA TELA GRANDE PARA A PEQUENA (BREAKPOINTS)
    ========================================================== */
 /* 1. TABLETS E TELAS MÉDIAS (Até 1040px) */
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1440px) {
     .main-content {
         width: 95%;
         height: auto;
         min-height: 80vh;
     }
 
+
+
     .login-tabs {
         width: 80%;
     }
 
-  
+    .area-do-aluno, .area-do-professor {
+       white-space: nowrap;
+       font-size: 0.9rem;
+    }
+
 }
 
 /* 2. TABLETS E CELULARES GRANDES (Até 768px) */
@@ -753,6 +762,8 @@ body {
       
         /* Opcional: dá um respiro entre a logo e a borda branca */
         display: block;
+
+  
     }
 
    .area-do-professor, .area-do-aluno {
@@ -765,6 +776,18 @@ body {
         line-height: 1.2;
         /* Cuidado: 0.4 pode encavalar as letras */
         font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    
+      .tab-btn {
+        width: 200%;
+    }
+
+        .area-do-aluno, .area-do-professor {
+       white-space: nowrap;
+       font-size: 0.9rem;
     }
 }
 
@@ -788,9 +811,6 @@ body {
         padding: 12px;
         font-size: 14px;
     }
-
-   
-   
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
