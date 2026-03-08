@@ -342,3 +342,5 @@
         document.querySelector('.faculty-tab').addEventListener('click', () => {
             document.getElementById('facultyRoleSelect').classList.add('show');
         });
+
+

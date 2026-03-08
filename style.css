@@ -150,7 +150,6 @@ body {
     width: 150px;
     /* Ocupa toda a largura do círculo */
     height: 150px;
-
 }
 
 
@@ -750,22 +749,13 @@ body {
         border-radius: 0 0 15px 15px;
     }
 
-    /* Definimos o logo uma única vez para mobile aqui */
-    .colegio img {
-        width: 200px;
+
+    .logo-container img {
+        width: 150px;
         /* Ocupa toda a largura do círculo */
-        height: 200px;
-        /* Ocupa toda a altura do círculo */
-        object-fit: contain;
-        /* Ou 'cover' se quiser que a imagem sangre até a borda */
-        border-radius: 50%;
-        /* Garante que a imagem também seja circular se necessário */
-
-        /* Opcional: dá um respiro entre a logo e a borda branca */
-        display: block;
-
-
+        height: 150px;
     }
+
 
     .area-do-professor,
     .area-do-aluno {
@@ -783,7 +773,7 @@ body {
 
 @media screen and (max-width: 620px) {
 
-  
+
 
     .area-do-aluno,
     .area-do-professor {
