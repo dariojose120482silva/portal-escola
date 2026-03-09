@@ -820,9 +820,7 @@ body {
         font-size: 0.80rem;
         max-width: 370px;
         line-height: 1.2;
-        /* Define um espaçamento saudável entre as linhas */
         text-align: center;
-        /* Opcional: centraliza o texto no bloco de 160px */
         margin: 0 auto;
     }
 }
