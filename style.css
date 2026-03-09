@@ -817,9 +817,9 @@ body {
 
 
     .footer-info p {
-        line-height: 1.2;
         /* Cuidado: 0.4 pode encavalar as letras */
         font-size: 0.75rem;
+         max-width: 160px;
     }
 }
 
