@@ -817,8 +817,9 @@ body {
 
 
     .footer-info p a {
+        padding: 10px 5px;
         font-size: 0.80rem;
-        max-width: 450px;
+        max-width: 490px;
     }
 }
 
