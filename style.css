@@ -818,7 +818,7 @@ body {
 
     .footer-info p {
         font-size: 0.80rem;
-        max-width: 160px;
+        max-width: 360px;
         line-height: 1.4;
         /* Define um espaçamento saudável entre as linhas */
         text-align: center;
