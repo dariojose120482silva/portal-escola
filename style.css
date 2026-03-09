@@ -819,7 +819,6 @@ body {
     .contato-secretaria {
         display: flex;
         flex-direction: column; 
-        gap: 1px; /* Espaço entre as linhas de telefone/email */
         margin-bottom: 10px; /* Afasta do copyright */
     }
 
