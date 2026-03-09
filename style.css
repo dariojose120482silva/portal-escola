@@ -819,14 +819,14 @@ body {
     .contato-secretaria {
         display: flex;
         flex-direction: column; 
-        gap: 4px; /* Espaço entre as linhas de telefone/email */
+        gap: 1px; /* Espaço entre as linhas de telefone/email */
         margin-bottom: 10px; /* Afasta do copyright */
     }
 
     .footer-info p, 
     .footer-info p a {
         font-size: 0.80rem;
-        line-height: 1.3; /* Aumentado para não encavalar */
+        line-height: 1.1; /* Aumentado para não encavalar */
         max-width: 300px; /* Aumentado de 160px para caber o e-mail inteiro */
         word-wrap: break-word; /* Garante que o e-mail quebre se for muito longo */
     }
