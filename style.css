@@ -805,7 +805,7 @@ body {
 }
 
 @media (max-width: 375px) {
-      .login-tabs {
+    .login-tabs {
         gap: 8px;
     }
 
@@ -817,9 +817,13 @@ body {
 
 
     .footer-info p {
-        /* Cuidado: 0.4 pode encavalar as letras */
-        font-size: 0.75rem;
-         max-width: 160px;
+        font-size: 0.80rem;
+        max-width: 160px;
+        line-height: 1.4;
+        /* Define um espaçamento saudável entre as linhas */
+        text-align: center;
+        /* Opcional: centraliza o texto no bloco de 160px */
+        margin: 0 auto;
     }
 }
 
