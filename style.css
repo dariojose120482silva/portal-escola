@@ -816,11 +816,9 @@ body {
     }
 
 
-    .footer-info p {
+    .footer-info p a {
         font-size: 0.80rem;
         max-width: 450px;
-        text-align: center;
-        margin: 0 auto;
     }
 }
 
