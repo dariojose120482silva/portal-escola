@@ -815,11 +815,20 @@ body {
         /* Diminuído levemente */
     }
 
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0.5rem;
+    }
 
     .footer-info p a {
-        padding: 10px 5px;
         font-size: 0.80rem;
-        max-width: 490px;
+        line-height: 1.1;
+        max-width: 160px;
     }
 }
 
