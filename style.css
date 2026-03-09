@@ -804,6 +804,25 @@ body {
     }
 }
 
+@media (max-width: 375px) {
+      .login-tabs {
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 10px 5px;
+        font-size: 11px;
+        /* Diminuído levemente */
+    }
+
+
+    .footer-info p {
+        line-height: 1.2;
+        /* Cuidado: 0.4 pode encavalar as letras */
+        font-size: 0.75rem;
+    }
+}
+
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
 @media screen and (max-width: 320px) {
     .login-tabs {
