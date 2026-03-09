@@ -819,7 +819,6 @@ body {
     .contato-secretaria {
         display: flex;
         flex-direction: column; 
-        margin-bottom: 10px; /* Afasta do copyright */
     }
 
     .footer-info p, 
