@@ -818,8 +818,7 @@ body {
 
     .footer-info p {
         font-size: 0.80rem;
-        max-width: 370px;
-        line-height: 1.2;
+        max-width: 450px;
         text-align: center;
         margin: 0 auto;
     }
