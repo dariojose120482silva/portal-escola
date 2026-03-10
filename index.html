@@ -188,7 +188,12 @@
                         <option value="trabalho">Trabalho Escolar</option>
                         <option value="interacao">Interação/Evento</option>
                     </select>
-                    <input type="file" id="fileInput" accept="image/*,video/*">
+                    <div class="upload-wrapper">
+                        <label for="fileInput" class="btn-custom-file">
+                            <i class="ri-upload-cloud-line"></i> Selecionar Arquivo
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*,video/*">
+                    </div>
                     <button onclick="adicionarNovoAnexo()" class="btn-upload-submit">Postar no Mural</button>
                 </div>
             </section>

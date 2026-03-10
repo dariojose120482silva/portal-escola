@@ -771,13 +771,6 @@ body {
         gap: 10px;
     }
 
-    #fileInput {
-        max-width: 100%;
-        overflow: hidden;
-        /* Corta o texto que sobrar */
-        box-sizing: border-box;
-    }
-
 }
 
 @media screen and (max-width: 620px) {
@@ -812,19 +805,6 @@ body {
         font-size: 14px;
     }
 
-    .upload-controls {
-        display: flex;
-        flex-direction: column;
-        /* Empilha os itens verticalmente */
-        gap: 10px;
-    }
-
-    #fileInput {
-        max-width: 100%;
-        overflow: hidden;
-        /* Corta o texto que sobrar */
-        box-sizing: border-box;
-    }
 }
 
 @media (max-width: 375px) {
@@ -1126,4 +1106,38 @@ body {
 .delete-btn:hover {
     background: #ff6b81 !important;
     transform: scale(1.2);
+}
+
+/* <input type="file" id="fileInput" accept="image/*,video/*">*/
+/* Esconde o input original e a frase "Nenhum arquivo escolhido" */
+#fileInput {
+    display: none;
+}
+
+/* Estiliza o Label para parecer o novo botão */
+.btn-custom-file {
+    display: block;
+    background-color: #f8f9fa;
+    border: 2px dashed #cbd5e0;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #4a5568;
+    transition: 0.3s;
+    width: 100%; /* Garante que ele não passe do container */
+    box-sizing: border-box;
+}
+
+.btn-custom-file:hover {
+    background-color: #edf2f7;
+    border-color: #4a90e2;
+}
+
+/* Media Query para telas bem pequenas */
+@media (max-width: 380px) {
+    .btn-custom-file {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
