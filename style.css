@@ -138,7 +138,7 @@ body {
 
 .logo-escola img {
     width: 20%;
-   
+
     /* Ocupa toda a largura do círculo */
     height: 20%;
 }
@@ -806,7 +806,7 @@ body {
         /* Diminuído levemente */
     }
 
-.footer-info {
+    .footer-info {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -818,18 +818,21 @@ body {
     /* Faz os itens dentro do parágrafo de secretaria empilharem */
     .contato-secretaria {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
     }
 
-    .footer-info p, 
+    .footer-info p,
     .footer-info p a {
         font-size: 0.80rem;
-        line-height: 1.1; /* Aumentado para não encavalar */
-        max-width: 300px; /* Aumentado de 160px para caber o e-mail inteiro */
-        word-wrap: break-word; /* Garante que o e-mail quebre se for muito longo */
+        line-height: 1.1;
+        /* Aumentado para não encavalar */
+        max-width: 300px;
+        /* Aumentado de 160px para caber o e-mail inteiro */
+        word-wrap: break-word;
+        /* Garante que o e-mail quebre se for muito longo */
     }
 
-   
+
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
@@ -850,4 +853,221 @@ body {
         /* Cuidado: 0.4 pode encavalar as letras */
         font-size: 0.75rem;
     }
+}
+
+/*///////////////*/
+/* Botão que chama os anexos */
+.modal-header h2 {
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.item-anexo {
+    position: relative;
+    /* Para posicionar a badge dentro */
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.item-anexo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.trabalho .badge {
+    background-color: #3498db;
+}
+
+/* Azul para trabalhos */
+.interacao .badge {
+    background-color: #e67e22;
+}
+
+/* Laranja para interações */
+
+/*////////*/
+.btn-anexos {
+    /* O segredo: inline-flex une o melhor dos dois mundos */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    /* Agora o gap funciona de verdade! */
+    margin-top: 40px;
+    padding: 12px 30px;
+
+    /* Seus estilos de design */
+    background: #adcee75a;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 700;
+    color: white;
+
+    /* Transição suave */
+    transition: all 0.3s ease;
+}
+
+.btn-anexos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(157, 104, 104, 0.621);
+    background-color: #7ac9eb44;
+}
+
+.ri-share-line {
+    font-size: 1.2rem;
+}
+
+/* Fundo escuro do Modal */
+.modal-anexos {
+    display: none;
+    /* Começa escondido */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+/* Caixa de conteúdo */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Grid para os itens */
+.grid-anexos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.item-anexo {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.item-anexo img,
+.video-placeholder {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.upload-section {
+    background: #f0f4f8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.upload-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.upload-controls input, .upload-controls select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.btn-upload-submit {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-upload-submit:hover {
+    background: #219150;
+}
+
+
+/* Container do item precisa ser relative */
+.item-anexo {
+    position: relative;
+    overflow: visible; /* Garante que o botão não seja cortado */
+}
+
+.delete-btn {
+    position: absolute;
+    top: -10px; /* Coloca um pouco para fora da imagem para destacar */
+    right: -10px;
+    background: #ff4757 !important; /* Vermelho vivo */
+    color: white !important;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999; /* Garante que fica na frente de TUDO */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+    opacity: 1 !important; /* FORCE para aparecer agora e testar */
+}
+
+.delete-btn i {
+    font-size: 18px;
+    pointer-events: none; /* Garante que o clique vá para o botão, não pro ícone */
+}
+
+.delete-btn:hover {
+    background: #ff6b81 !important;
+    transform: scale(1.2);
 }

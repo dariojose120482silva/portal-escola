@@ -7,8 +7,8 @@
     <title>Portal Escolar Isaias J. R.</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link
-    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="/asset/logo-isaias-2.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,7 +21,7 @@
             <section class="brand-section">
                 <header class="logo-container">
                     <div class="logo-escola">
-                    <img class="colegio" src="./asset/img/logo-isaias-2.png" alt="Logo Escola Isaías">
+                        <img class="colegio" src="./asset/img/logo-isaias-2.png" alt="Logo Escola Isaías">
                     </div>
                 </header>
                 <h1 class="institute-name">COLÉGIO ISAIAS JOSÉ RODRIGUES</h1>
@@ -41,6 +41,10 @@
                         <p><strong>Professores:</strong> Lançamento de notas, faltas e ocorrências da turma.</p>
                     </article>
                 </div>
+
+                <button class="btn-anexos" onclick="toggleAnexos()">
+                    <i class="ri-share-line"></i> Trabalhos e Interações
+                </button>
             </section>
 
             <!-- Right Side - Login Forms -->
@@ -152,18 +156,62 @@
         </div>
     </main>
 
+
     <!-- Footer -->
     <footer class="footer">
-    <address class="footer-info">
-        <p class="contato-secretaria">
-            <span>Secretaria escolar</span>
-            <span>(11) 0000-0000</span>
-            <a href="https://darioflauta@gmail.com">contato@escolavemu.com.br</a>
-        </p>
-        <p class="copyright">© 2026 Colégio Isaias José Rodrigues.</p>
-    </address>
-</footer>
+        <address class="footer-info">
+            <p class="contato-secretaria">
+                <span>Secretaria escolar</span>
+                <span>(11) 0000-0000</span>
+                <a href="https://darioflauta@gmail.com">contato@escolavemu.com.br</a>
+            </p>
+            <p class="copyright">© 2026 Colégio Isaias José Rodrigues.</p>
+        </address>
+    </footer>
 
+    <!-- Modal Anexos -->
+
+    <div id="sectionAnexos" class="modal-anexos">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleAnexos()">&times;</span>
+
+            <header class="modal-header">
+                <h2><i class="ri-team-line"></i> Trabalhos e Interações</h2>
+                <p>Explore as atividades acadêmicas e os momentos compartilhados da nossa escola.</p>
+            </header>
+
+            <section class="upload-section">
+                <h3><i class="ri-add-circle-line"></i> Adicionar Novo Arquivo</h3>
+                <div class="upload-controls">
+                    <input type="text" id="fileTitle" placeholder="Título (ex: Maquete de História)">
+                    <select id="fileType">
+                        <option value="trabalho">Trabalho Escolar</option>
+                        <option value="interacao">Interação/Evento</option>
+                    </select>
+                    <input type="file" id="fileInput" accept="image/*,video/*">
+                    <button onclick="adicionarNovoAnexo()" class="btn-upload-submit">Postar no Mural</button>
+                </div>
+            </section>
+            <hr>
+
+            <hr>
+            <div class="grid-anexos">
+                <div class="item-anexo trabalho">
+                    <div class="badge">Trabalho</div>
+                    <img src="asset/img/trabalho-exemplo.jpg" alt="Maquete">
+                    <span>Projeto Sustentabilidade - 2º Médio</span>
+                </div>
+
+                <div class="item-anexo interacao">
+                    <div class="badge">Interação</div>
+                    <div class="video-placeholder">
+                        <i class="ri-video-chat-line"></i>
+                    </div>
+                    <span>Gincana Cultural 2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
