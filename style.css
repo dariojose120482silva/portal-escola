@@ -708,6 +708,7 @@ body {
         font-size: 0.9rem;
     }
 
+
 }
 
 /* 2. TABLETS E CELULARES GRANDES (Até 768px) */
@@ -760,12 +761,23 @@ body {
         /* Cuidado: 0.4 pode encavalar as letras */
         font-size: 0.75rem;
     }
+
+    .upload-controls {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        gap: 10px;
+    }
+
+    #fileInput {
+        max-width: 100%;
+        
+        box-sizing: border-box;
+    }
+
+   
 }
 
 @media screen and (max-width: 620px) {
-
-
-
     .area-do-aluno,
     .area-do-professor {
         white-space: nowrap;
@@ -779,6 +791,8 @@ body {
         font-size: 0.85rem;
         max-width: 160px;
     }
+
+    
 
     .institute-name {
         font-size: 18px;
@@ -852,6 +866,11 @@ body {
         line-height: 1.2;
         /* Cuidado: 0.4 pode encavalar as letras */
         font-size: 0.75rem;
+    }
+
+     .input input {
+       width: 100%;
+    
     }
 }
 
