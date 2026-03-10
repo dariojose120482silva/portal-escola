@@ -685,6 +685,8 @@ body {
     color: var(--warning-color);
 }
 
+
+
 /* ==========================================================
    DA TELA GRANDE PARA A PEQUENA (BREAKPOINTS)
    ========================================================== */
@@ -764,20 +766,22 @@ body {
 
     .upload-controls {
         display: flex;
-        flex-direction: column; /* Empilha os itens verticalmente */
+        flex-direction: column;
+        /* Empilha os itens verticalmente */
         gap: 10px;
     }
 
     #fileInput {
         max-width: 100%;
-        
+        overflow: hidden;
+        /* Corta o texto que sobrar */
         box-sizing: border-box;
     }
 
-   
 }
 
 @media screen and (max-width: 620px) {
+
     .area-do-aluno,
     .area-do-professor {
         white-space: nowrap;
@@ -792,7 +796,7 @@ body {
         max-width: 160px;
     }
 
-    
+
 
     .institute-name {
         font-size: 18px;
@@ -806,6 +810,20 @@ body {
     .login-btn {
         padding: 12px;
         font-size: 14px;
+    }
+
+    .upload-controls {
+        display: flex;
+        flex-direction: column;
+        /* Empilha os itens verticalmente */
+        gap: 10px;
+    }
+
+    #fileInput {
+        max-width: 100%;
+        overflow: hidden;
+        /* Corta o texto que sobrar */
+        box-sizing: border-box;
     }
 }
 
@@ -846,7 +864,19 @@ body {
         /* Garante que o e-mail quebre se for muito longo */
     }
 
+    .upload-controls {
+        display: flex;
+        flex-direction: column;
+        /* Empilha os itens verticalmente */
+        gap: 10px;
+    }
 
+    #fileInput {
+        max-width: 100%;
+        overflow: hidden;
+        /* Corta o texto que sobrar */
+        box-sizing: border-box;
+    }
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
@@ -868,9 +898,9 @@ body {
         font-size: 0.75rem;
     }
 
-     .input input {
-       width: 100%;
-    
+    .input input {
+        width: 100%;
+
     }
 }
 
@@ -1032,7 +1062,8 @@ body {
     margin-top: 10px;
 }
 
-.upload-controls input, .upload-controls select {
+.upload-controls input,
+.upload-controls select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -1058,14 +1089,17 @@ body {
 /* Container do item precisa ser relative */
 .item-anexo {
     position: relative;
-    overflow: visible; /* Garante que o botão não seja cortado */
+    overflow: visible;
+    /* Garante que o botão não seja cortado */
 }
 
 .delete-btn {
     position: absolute;
-    top: -10px; /* Coloca um pouco para fora da imagem para destacar */
+    top: -10px;
+    /* Coloca um pouco para fora da imagem para destacar */
     right: -10px;
-    background: #ff4757 !important; /* Vermelho vivo */
+    background: #ff4757 !important;
+    /* Vermelho vivo */
     color: white !important;
     border: 2px solid white;
     border-radius: 50%;
@@ -1075,15 +1109,18 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 999; /* Garante que fica na frente de TUDO */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 999;
+    /* Garante que fica na frente de TUDO */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
-    opacity: 1 !important; /* FORCE para aparecer agora e testar */
+    opacity: 1 !important;
+    /* FORCE para aparecer agora e testar */
 }
 
 .delete-btn i {
     font-size: 18px;
-    pointer-events: none; /* Garante que o clique vá para o botão, não pro ícone */
+    pointer-events: none;
+    /* Garante que o clique vá para o botão, não pro ícone */
 }
 
 .delete-btn:hover {
