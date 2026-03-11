@@ -771,6 +771,12 @@ body {
         gap: 10px;
     }
 
+    .trabalho-interacao {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+
 }
 
 @media screen and (max-width: 620px) {
@@ -780,6 +786,7 @@ body {
         white-space: nowrap;
         font-size: 0.9rem;
     }
+
 }
 
 /* 3. CELULARES (Faixa de 393px até 480px) */
@@ -804,6 +811,12 @@ body {
         padding: 12px;
         font-size: 14px;
     }
+
+    .trabalho-interacao {
+        font-size: 1rem;
+    }
+
+
 
 }
 
@@ -857,47 +870,60 @@ body {
         /* Corta o texto que sobrar */
         box-sizing: border-box;
     }
+
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
-@media screen and (max-width: 320px) {
-    .login-tabs {
-        gap: 5px;
+    @media screen and (max-width: 320px) {
+        .login-tabs {
+            gap: 5px;
+        }
+
+        .tab-btn {
+            padding: 10px 5px;
+            font-size: 11px;
+            /* Diminuído levemente */
+        }
+
+
+        .footer-info p {
+            line-height: 1.2;
+            /* Cuidado: 0.4 pode encavalar as letras */
+            font-size: 0.75rem;
+        }
+
+        .input input {
+            width: 100%;
+
+        }
+
     }
-
-    .tab-btn {
-        padding: 10px 5px;
-        font-size: 11px;
-        /* Diminuído levemente */
-    }
-
-
-    .footer-info p {
-        line-height: 1.2;
-        /* Cuidado: 0.4 pode encavalar as letras */
-        font-size: 0.75rem;
-    }
-
-    .input input {
-        width: 100%;
-
-    }
-}
 
 /*///////////////*/
 /* Botão que chama os anexos */
 .modal-header h2 {
-    color: #2c3e50;
+    color: #f0e4e4;
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 5px;
 }
 
+.ri-team-line {
+    color: #4a90e2;
+    font-size: 1.4rem;
+}
+
+.modal-subtitle {
+    color: #cfc;
+}
+
+
+
 .item-anexo {
     position: relative;
     /* Para posicionar a badge dentro */
-    background: #f8f9fa;
+    background: #ede3e3;
     padding: 10px;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -915,7 +941,7 @@ body {
     padding: 2px 8px;
     font-size: 0.7rem;
     border-radius: 4px;
-    color: white;
+    color: rgb(243, 236, 236);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -983,7 +1009,7 @@ body {
 
 /* Caixa de conteúdo */
 .modal-content {
-    background-color: white;
+    background-color: rgba(137, 183, 120, 0.266);
     margin: 5% auto;
     padding: 30px;
     width: 80%;
@@ -993,6 +1019,8 @@ body {
     max-height: 80vh;
     overflow-y: auto;
 }
+
+
 
 .close-btn {
     position: absolute;
@@ -1005,7 +1033,7 @@ body {
 /* Grid para os itens */
 .grid-anexos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
@@ -1029,10 +1057,21 @@ body {
 
 
 .upload-section {
-    background: #f0f4f8;
+    background: #b8e77e4d;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.upload-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ri-add-circle-line {
+    color: rgb(45, 153, 183);
+    font-size: 1.3rem;
 }
 
 .upload-controls {
@@ -1044,15 +1083,16 @@ body {
 
 .upload-controls input,
 .upload-controls select {
+    background-color: rgba(239, 231, 216, 0.366);
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ede5e5;
     border-radius: 5px;
     font-family: 'Bai Jamjuree', sans-serif;
 }
 
 .btn-upload-submit {
-    background: #27ae60;
-    color: white;
+    background: #a5ae27;
+    color: rgb(253, 247, 247);
     border: none;
     padding: 8px 20px;
     border-radius: 5px;
@@ -1080,7 +1120,7 @@ body {
     right: -10px;
     background: #ff4757 !important;
     /* Vermelho vivo */
-    color: white !important;
+    color: rgb(151, 95, 95) !important;
     border: 2px solid white;
     border-radius: 50%;
     width: 30px;
@@ -1117,15 +1157,16 @@ body {
 /* Estiliza o Label para parecer o novo botão */
 .btn-custom-file {
     display: block;
-    background-color: #f8f9fa;
+    background-color: #d5dde6;
     border: 2px dashed #cbd5e0;
     padding: 15px;
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
-    color: #4a5568;
+    color: #111419;
     transition: 0.3s;
-    width: 100%; /* Garante que ele não passe do container */
+    width: 100%;
+    /* Garante que ele não passe do container */
     box-sizing: border-box;
 }
 
@@ -1139,5 +1180,10 @@ body {
     .btn-custom-file {
         font-size: 14px;
         padding: 10px;
+    }
+
+    .sustentabilidade,
+    .cutural {
+        max-width: 250px;
     }
 }
