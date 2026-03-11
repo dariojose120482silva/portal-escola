@@ -820,10 +820,23 @@ body {
    AJUSTE PARA 375px (Títulos e Subtítulos)
    ========================================================== */
 @media (max-width: 375px) {
-    
-    .doc-subtitle, .btn-anexos{
-        max-width: 250px;
+
+    .institute-name {
+        font-size: 16px;
+        font-weight: 700;
+        max-width: 350px;
     }
+
+    .doc-subtitle {
+        font-size: 0.8rem;
+    }
+
+
+    .btn-anexos {
+        max-width: 350px;
+    }
+
+    
     /* 1. TÍTULO: Força uma única linha */
     .trabalho-interacao {
         font-size: 1.1rem;
