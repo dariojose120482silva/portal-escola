@@ -840,7 +840,7 @@ body {
         white-space: nowrap;
         /* IMPEDE A QUEBRA DE LINHA */
         text-align: center;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         /* Ajuste fino para o texto caber */
         margin: 10px 0;
         padding: 5px 0;
@@ -856,7 +856,7 @@ body {
         /* Remove a trava de 48% */
         margin: 15px auto;
         /* Centraliza horizontalmente */
-        font-size: 14px;
+        font-size: 0.9rem;
         font-weight: 700;
         padding: 12px 0;
         text-align: center;
