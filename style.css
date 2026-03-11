@@ -829,38 +829,41 @@ body {
 
     /* 1. Criamos um "envelope" flexível para os dois */
 
-    .btn-anexos {
-        display: inline-flex;
-        /* Faz eles aceitarem ficar lado a lado */
-        vertical-align: middle;
-        /* Alinha a altura entre eles */
-        width: 90%;
-        /* Remove a largura total que causa a quebra */
-        max-width: 48%;
-        /* Garante que somados não estourem os 100% */
-        margin: 0;
-        padding: 5px 2px;
-        /* Reduzi o padding lateral para caber melhor */
+    /* 1. SUBTÍTULO: Força uma linha só e centraliza */
+    .doc-subtitle {
+        display: block;
+        /* Garante que se comporte como bloco */
+        width: 100%;
+        /* Usa a largura total disponível */
+        max-width: 100% !important;
+        /* Remove qualquer trava de 48% ou 350px */
         white-space: nowrap;
-        /* Impede o texto de quebrar dentro deles */
+        /* IMPEDE A QUEBRA DE LINHA */
+        text-align: center;
+        font-size: 0.85rem;
+        /* Ajuste fino para o texto caber */
+        margin: 10px 0;
+        padding: 5px 0;
     }
 
-    /* 2. Ajuste fino de tamanhos para 375px */
-    .doc-subtitle {
-        display: inline-flex;
-        /* Faz eles aceitarem ficar lado a lado */
-        vertical-align: middle;
-        /* Alinha a altura entre eles */
-        width: 90%;
-        /* Remove a largura total que causa a quebra */
-        max-width: 48%;
-        /* Garante que somados não estourem os 100% */
-        margin: 0;
-        padding: 5px 2px;
-        /* Reduzi o padding lateral para caber melhor */
-        white-space: nowrap;
-        /* Impede o texto de quebrar dentro deles */
+    /* 2. BOTÃO ANEXOS: Ocupa a largura da tela e centraliza */
+    .btn-anexos {
+        display: block;
+        /* Garante que ele não tente ficar ao lado de nada */
+        width: 95%;
+        /* Quase a tela toda */
+        max-width: 95% !important;
+        /* Remove a trava de 48% */
+        margin: 15px auto;
+        /* Centraliza horizontalmente */
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px 0;
+        text-align: center;
+        box-sizing: border-box;
+        /* Impede que o padding "estoure" a largura */
     }
+
 
 
     /* 1. TÍTULO: Força uma única linha */
