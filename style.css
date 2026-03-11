@@ -827,24 +827,22 @@ body {
         max-width: 350px;
     }
 
+    /* 2. Ajuste fino de tamanhos para 375px */
     .doc-subtitle {
-        font-size: 0.6rem;
-        font-weight: 700;
-        max-width: 350px;
-        text-align: center;
-        padding: 10px 0;
+        font-size: 0.65rem;
+        justify-content: center;
     }
-
 
     .btn-anexos {
-        font-size: 14px;
-        font-weight: 700;
-        max-width: 350px;
-        text-align: center;
-        padding: 10px 0;
+        font-size: 11px;
+        /* Diminuído para garantir o encaixe na mesma linha */
+        justify-content: center;
+        background-color: #f0f0f0;
+        /* Exemplo, mantenha sua cor original */
+        border-radius: 4px;
     }
 
-    
+
     /* 1. TÍTULO: Força uma única linha */
     .trabalho-interacao {
         font-size: 1.1rem;
