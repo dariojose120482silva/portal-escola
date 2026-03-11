@@ -828,11 +828,15 @@ body {
     }
 
     .doc-subtitle {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        max-width: 350px;
     }
 
 
     .btn-anexos {
+        font-size: 14px;
+        font-weight: 700;
         max-width: 350px;
     }
 
