@@ -828,11 +828,11 @@ body {
     }
 
     /* 1. Criamos um "envelope" flexível para os dois */
-    .doc-subtitle, 
+    
     .btn-anexos {
         display: inline-flex; /* Faz eles aceitarem ficar lado a lado */
         vertical-align: middle; /* Alinha a altura entre eles */
-        width: auto; /* Remove a largura total que causa a quebra */
+        width: 90%; /* Remove a largura total que causa a quebra */
         max-width: 48%; /* Garante que somados não estourem os 100% */
         margin: 0;
         padding: 5px 2px; /* Reduzi o padding lateral para caber melhor */
@@ -843,6 +843,7 @@ body {
     .doc-subtitle {
         font-size: 0.65rem;
         justify-content: center;
+          white-space: nowrap; /* Impede o texto de quebrar dentro deles */
     }
 
     .btn-anexos {
