@@ -871,8 +871,7 @@ body {
         box-sizing: border-box;
     }
 
-
-    .trabalho-interacao {
+    /*.trabalho-interacao {
         font-size: 1.2rem;
         font-weight: 700;
     }
@@ -885,7 +884,7 @@ body {
     .upload-title {
         font-size: 0.2rem;
         max-width: 270px;
-    }
+    }*/
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
