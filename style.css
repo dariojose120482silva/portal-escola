@@ -830,7 +830,7 @@ body {
     /* 1. Criamos um "envelope" flexível para os dois */
 
     /* 1. SUBTÍTULO: Força uma linha só e centraliza */
-    .doc-subtitle {
+    .project-title {
         display: block;
         /* Garante que se comporte como bloco */
         width: 100%;
