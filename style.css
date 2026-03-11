@@ -843,14 +843,14 @@ body {
         font-size: 0.9rem;
         /* Ajuste fino para o texto caber */
         margin: 10px 0;
-        padding: 5px 0;
+        padding: 10px 0;
     }
 
     /* 2. BOTÃO ANEXOS: Ocupa a largura da tela e centraliza */
-    .btn-anexos {
+    .btn-anexos bottom {
         display: block;
         /* Garante que ele não tente ficar ao lado de nada */
-        width: 95%;
+        width: 100%;
         /* Quase a tela toda */
         max-width: 250px;
         /* Remove a trava de 48% */
@@ -858,7 +858,7 @@ body {
         /* Centraliza horizontalmente */
         font-size: 0.9rem;
         font-weight: 700;
-        padding: 12px 0;
+        padding: 10px 0;
         text-align: center;
         box-sizing: border-box;
         /* Impede que o padding "estoure" a largura */
