@@ -776,7 +776,9 @@ body {
         font-weight: 700;
     }
 
-
+    .modal-subtitle {
+        max-width: 260px;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -815,8 +817,6 @@ body {
     .trabalho-interacao {
         font-size: 1rem;
     }
-
-
 
 }
 
@@ -871,33 +871,40 @@ body {
         box-sizing: border-box;
     }
 
+    .modal-subtitle {
+        max-width: 260px;
+    }
+
+    .upload-title {
+       max-width: 250px; 
+    }
 }
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
-    @media screen and (max-width: 320px) {
-        .login-tabs {
-            gap: 5px;
-        }
+@media screen and (max-width: 320px) {
+    .login-tabs {
+        gap: 5px;
+    }
 
-        .tab-btn {
-            padding: 10px 5px;
-            font-size: 11px;
-            /* Diminuído levemente */
-        }
+    .tab-btn {
+        padding: 10px 5px;
+        font-size: 11px;
+        /* Diminuído levemente */
+    }
 
 
-        .footer-info p {
-            line-height: 1.2;
-            /* Cuidado: 0.4 pode encavalar as letras */
-            font-size: 0.75rem;
-        }
+    .footer-info p {
+        line-height: 1.2;
+        /* Cuidado: 0.4 pode encavalar as letras */
+        font-size: 0.75rem;
+    }
 
-        .input input {
-            width: 100%;
-
-        }
+    .input input {
+        width: 100%;
 
     }
+
+}
 
 /*///////////////*/
 /* Botão que chama os anexos */
