@@ -871,12 +871,19 @@ body {
         box-sizing: border-box;
     }
 
+
+    .trabalho-interacao {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
     .modal-subtitle {
-        max-width: 270px;
+        max-width: 260px;
     }
 
     .upload-title {
-       max-width: 370px; 
+        font-size: 1rem;
+        max-width: 370px;
     }
 }
 
