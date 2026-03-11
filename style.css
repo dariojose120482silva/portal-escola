@@ -835,7 +835,7 @@ body {
         /* Garante que se comporte como bloco */
         width: 100%;
         /* Usa a largura total disponível */
-        max-width: 100% !important;
+        max-width: 250px;
         /* Remove qualquer trava de 48% ou 350px */
         white-space: nowrap;
         /* IMPEDE A QUEBRA DE LINHA */
@@ -852,7 +852,7 @@ body {
         /* Garante que ele não tente ficar ao lado de nada */
         width: 95%;
         /* Quase a tela toda */
-        max-width: 95% !important;
+        max-width: 250px;
         /* Remove a trava de 48% */
         margin: 15px auto;
         /* Centraliza horizontalmente */
