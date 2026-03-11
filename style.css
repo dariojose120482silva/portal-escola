@@ -831,6 +831,8 @@ body {
         font-size: 0.6rem;
         font-weight: 700;
         max-width: 350px;
+        text-align: center;
+        padding: 10px 0;
     }
 
 
@@ -838,6 +840,8 @@ body {
         font-size: 14px;
         font-weight: 700;
         max-width: 350px;
+        text-align: center;
+        padding: 10px 0;
     }
 
     
