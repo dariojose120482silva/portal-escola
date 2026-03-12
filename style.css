@@ -170,6 +170,22 @@ body {
     margin-top: 20px;
 }
 
+.btn-anexos {
+    display: block;
+    /* Faz o botão se comportar como um bloco único */
+    font-size: 1rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    width: 80%;
+    max-width: 350px;
+    border-radius: 25px;
+    padding: 0.1rem 0.5rem;
+
+    margin: 15px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 .role-info-cards {
     margin-top: 30px;
     width: 100%;
@@ -222,30 +238,34 @@ body {
 }
 
 .tab-btn {
+
     margin-top: 0.1rem;
-    height: 70px;
+    height: 50px;
     flex: 1;
-    padding: 1rem 1rem;
+    padding: 1rem;
     border: none;
     background: #f8f9fa;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-size: 1.0rem;
+    align-items: center;
+    gap: 10px;
     font-weight: 700;
+    font-family: 'Bai Jamjuree';
     color: var(--text-light);
     border: 2px solid transparent;
 }
 
-
+.area-do-aluno,
+.area-do-professor {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
 
 .tab-btn i {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .tab-btn.student-tab.active {
@@ -740,6 +760,11 @@ body {
     }
 
     .login-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
         border-radius: 0 0 15px 15px;
     }
 
@@ -756,6 +781,28 @@ body {
         white-space: nowrap;
         font-size: 0.9rem;
     }
+
+    .tab-btn {
+
+    margin-top: 0.1rem;
+    height: 50px;
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: #f8f9fa;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-family: 'Bai Jamjuree';
+    color: var(--text-light);
+    border: 2px solid transparent;
+}
 
 
     .footer-info p {
@@ -871,7 +918,7 @@ body {
         /* Espaço entre o ícone e o texto */
     }
 
-       .logo-container img {
+    .logo-container img {
         width: 150px;
         /* Ocupa toda a largura do círculo */
         height: 150px;
