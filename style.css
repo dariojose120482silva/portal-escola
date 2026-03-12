@@ -852,14 +852,13 @@ body {
         /* Faz o botão se comportar como um bloco único */
         width: 100%;
         /* Tenta ocupar a largura disponível */
-        max-width: 300px;
+        max-width: 350px;
         /* Aumentei de 250px para 300px para o texto não apertar */
         margin: 15px auto;
         /* Centraliza o botão na tela */
 
         font-size: 0.9rem;
         font-weight: 700;
-        padding: 10px 0;
         /* Aumentei um pouco o toque para facilitar no celular */
 
         text-align: center;
@@ -869,7 +868,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
         /* Espaço entre o ícone e o texto */
     }
 
