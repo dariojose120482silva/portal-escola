@@ -745,9 +745,9 @@ body {
 
 
     .logo-container img {
-        width: 150px;
+        width: 200px;
         /* Ocupa toda a largura do círculo */
-        height: 150px;
+        height: 200px;
     }
 
 
@@ -871,6 +871,12 @@ body {
         justify-content: center;
         gap: 8px;
         /* Espaço entre o ícone e o texto */
+    }
+
+       .logo-container img {
+        width: 150px;
+        /* Ocupa toda a largura do círculo */
+        height: 150px;
     }
 
     /* Garante que o ícone acompanhe o estilo */
