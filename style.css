@@ -846,22 +846,36 @@ body {
         padding: 10px 0;
     }
 
-    /* 2. BOTÃO ANEXOS: Ocupa a largura da tela e centraliza */
-    .btn-anexos bottom {
+    /* Seletor corrigido: removido o "bottom" e ajustado o tamanho */
+    .btn-anexos {
         display: block;
-        /* Garante que ele não tente ficar ao lado de nada */
+        /* Faz o botão se comportar como um bloco único */
         width: 100%;
-        /* Quase a tela toda */
-        max-width: 250px;
-        /* Remove a trava de 48% */
+        /* Tenta ocupar a largura disponível */
+        max-width: 300px;
+        /* Aumentei de 250px para 300px para o texto não apertar */
         margin: 15px auto;
-        /* Centraliza horizontalmente */
+        /* Centraliza o botão na tela */
+
         font-size: 0.9rem;
         font-weight: 700;
         padding: 10px 0;
+        /* Aumentei um pouco o toque para facilitar no celular */
+
         text-align: center;
         box-sizing: border-box;
-        /* Impede que o padding "estoure" a largura */
+
+        /* Se o ícone estiver desalinhado, o flex ajuda */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        /* Espaço entre o ícone e o texto */
+    }
+
+    /* Garante que o ícone acompanhe o estilo */
+    .btn-anexos i {
+        font-size: 1.1rem;
     }
 
 
