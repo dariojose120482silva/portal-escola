@@ -754,6 +754,7 @@ body {
         border-radius: 0;
     }
 
+
     .brand-section {
         border-radius: 15px 15px 0 0;
         padding: 40px 20px;
@@ -761,12 +762,11 @@ body {
 
     .login-section {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        border-radius: 0 0 15px 15px;
     }
+
 
 
     .logo-container img {
@@ -784,25 +784,25 @@ body {
 
     .tab-btn {
 
-    margin-top: 0.1rem;
-    height: 50px;
-    flex: 1;
-    padding: 1rem;
-    border: none;
-    background: #f8f9fa;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-family: 'Bai Jamjuree';
-    color: var(--text-light);
-    border: 2px solid transparent;
-}
+        margin-top: 0.1rem;
+        height: 50px;
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        background: #f8f9fa;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-family: 'Bai Jamjuree';
+        color: var(--text-light);
+        border: 2px solid transparent;
+    }
 
 
     .footer-info p {
@@ -830,10 +830,30 @@ body {
 
 @media screen and (max-width: 620px) {
 
+
+
+    .login-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
     .area-do-aluno,
     .area-do-professor {
         white-space: nowrap;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+
+    .login-tabs {
+       
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #05a21568;
+        padding-bottom: 10px;
     }
 
 }
@@ -855,6 +875,8 @@ body {
         width: 100px;
         height: 100px;
     }
+
+
 
     .login-btn {
         padding: 12px;
@@ -1002,6 +1024,15 @@ body {
         font-size: 0.80rem;
         line-height: 1.2;
         word-wrap: break-word;
+    }
+
+    .login-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 0 0 15px 15px;
     }
 }
 
