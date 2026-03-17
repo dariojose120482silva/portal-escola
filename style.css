@@ -996,9 +996,9 @@ body {
     }
 
     /* Ajustes complementares que já estavam no seu código */
-    .login-tabs {
+    /*.login-tabs {
         gap: 8px;
-    }
+    }*/
 
     .tab-btn {
         padding: 10px 5px;
@@ -1038,9 +1038,7 @@ body {
 
 /* 4. AJUSTE ESPECÍFICO PARA TELAS MUITO PEQUENAS (Até 320px) */
 @media screen and (max-width: 320px) {
-    .login-tabs {
-        gap: 5px;
-    }
+   
 
     .tab-btn {
         padding: 10px 5px;
